@@ -14,19 +14,17 @@ export default async function handler(req, res) {
       });
     }
 
-    const resposta = `
-Olá! 👋 Eu sou a LFIA.
+    const resposta = `Olá! 👋 Eu sou a LFIA.
 
 Você perguntou: "${pergunta}"
 
 Matéria: ${materia || "Não selecionada"}
 
 Ainda estou sendo conectada a uma IA real. 🤖
-Por enquanto, recebi sua pergunta corretamente!
-    `;
+Por enquanto, recebi sua pergunta corretamente!`;
 
     return res.status(200).json({
-      resposta: resposta.trim()
+      resposta: resposta
     });
 
   } catch (erro) {
